@@ -17,10 +17,10 @@ class CucumberCpp < Formula
 
   def install
     args = std_cmake_args
-    args << "-DCUKE_DISABLE_GTEST=on"
-    args << "-DCUKE_DISABLE_CPPSPEC=on"
-    args << "-DCUKE_DISABLE_FUNCTIONAL=on"
-    args << "-DCUKE_DISABLE_BOOST_TEST=on"
+    args << "-DCUKE_DISABLE_GTEST=off"
+    args << "-DCUKE_DISABLE_CPPSPEC=off"
+    args << "-DCUKE_DISABLE_FUNCTIONAL=off"
+    args << "-DCUKE_DISABLE_BOOST_TEST=off"
     system "cmake", ".", *args
     system "cmake", "--build", "."
     system "make", "install"
